@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /servicios/
+Allow: /contacto/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+Disallow: /trackback/
+Disallow: /comments/
+Disallow: /category/
+Disallow: /author/
+Disallow: /tag/
+Disallow: /feed/
+Disallow: /rss/
+Disallow: /xmlrpc.php
+Disallow: /search/
+
+Sitemap: https://automatizalo.pe/sitemap.xml 

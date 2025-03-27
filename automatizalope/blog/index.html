@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <!-- Mismo head que index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Automatización e IA | Automatizalo.pe</title>
+    <meta name="description" content="Descubre artículos sobre automatización e inteligencia artificial para transformar tu negocio en Perú.">
+    <meta name="keywords" content="blog automatización, IA Perú, inteligencia artificial, chatbots, optimización de procesos">
+    <meta name="author" content="Automatizalo.pe">
+    <meta property="twitter:image" content="../assets/images/blog_image.webp">
+    
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Preconnects y Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="nav" data-aos="fade-down">
+    <div class="logo">Automatizalo.pe</div>
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="../servicios/index.html">Servicios</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contacto/index.html">Contacto</a>
+    </div>
+    <button class="mobile-menu"><i class="fas fa-bars"></i></button>
+  </nav>
+
+<!-- Sección Hero optimizada -->
+<section class="hero servicios-hero" id="servicios-hero">
+    <div class="hero-overlay"></div>
+    <picture class="hero-bg">
+        <!-- Versión vertical para móviles en portrait -->
+        <source 
+            media="(max-width: 768px) and (orientation: portrait),
+                (max-height: 700px)"
+            srcset="../blog/assets/images/blog_900_1200.webp">
+        
+        <!-- Versión horizontal para desktop/tablets -->
+        <source 
+            media="(min-width: 769px) or (orientation: landscape)"
+            srcset="../blog/assets/images/blog_1600_900.webp">
+        
+        <img 
+            src="../blog/assets/images/blog_1600_900.webp" 
+            alt="Blog de Automatización e IA"
+            loading="eager"
+            decoding="async"
+            class="hero-bg-img">
+    </picture>
+    
+    <div class="hero-content" data-aos="fade-right">
+        <div class="hero-text">
+            <h1>Blog de Automatización e IA</h1>
+            <p class="lead">Artículos para potenciar tu negocio.</p>
+        </div>
+    </div>
+  </section>
+
+    <!-- Listado de Posts -->
+    <main class="blog-listing section">
+        <div class="container">
+            <h2 class="section-title">Últimos Artículos</h2>
+            <div class="blog-grid">
+                <!-- Repetir esta estructura para cada post -->
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="blog-image" style="background-image: url('../blog/assets/images/encabezado_blog1.webp')"></div>
+                    <div class="blog-content">
+                        <h4>Automatización e IA para tu Negocio en Perú: ¡No te Compliques! 🚀</h4>
+                        <p>¿Pensando en usar la tecnología para crecer en Perú? Te mostramos cómo sin que sea una pesadilla.</p>
+                        <a href="../blog/blog_entries/blog_1_automatizaciones_en_tu_negocio.html" class="blog-link">Leer más →</a>
+                    </div>
+                </div>
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="blog-image" style="background-image: url('../blog/assets/images/encabezado_blog2.webp')"></div>
+                    <div class="blog-content">
+                        <h4>Automatización de tu Negocio en Perú: Más Fácil y Económico de lo que Crees</h4>
+                        <p>Descubre cómo la automatización puede transformar tu empresa peruana, optimizando procesos y reduciendo costos sin complicaciones.</p>
+                        <a href="../blog/blog_entries/blog_2_automatizacion-facil.html" class="blog-link">Leer más →</a>
+                    </div>
+                </div>
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="blog-image" style="background-image: url('../blog/assets/images/redes_vs_auto_blog3.webp')"></div>
+                    <div class="blog-content">
+                        <h4>Automatización vs Redes Sociales: ¿Cuál es la Clave para el Éxito en Perú? 🚀</h4>
+                        <p>Descubre por qué la automatización de tu negocio en Perú se está volviendo tan crucial como tener presencia en redes sociales para el crecimiento y la eficiencia.</p>
+                        <a href="../blog/blog_entries/blog_3_automatizacion-vs-redes.html" class="blog-link">Leer más →</a>
+                    </div>
+                </div>
+                <!-- Más posts -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <div class="container">
+            <p>© 2023 Automatizalo.pe - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>

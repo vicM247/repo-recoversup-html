@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro de Reclamaciones | Automatizalo.pe</title>
+  <meta name="description" content="Registra tus reclamaciones y opiniones. En Automatizalo.pe escuchamos y trabajamos para mejorar.">
+  <meta name="keywords" content="libro de reclamaciones, reclamaciones, atención al cliente, automatización, IA">
+  <meta name="author" content="Automatizalo.pe">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://automatizalo.pe/libro_reclamaciones.html">
+  <meta property="og:title" content="Libro de Reclamaciones | Automatizalo.pe">
+  <meta property="og:description" content="Registra tus reclamaciones y opiniones.">
+  <meta property="og:image" content="assets/images/libro_reclamaciones.webp">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:creator" content="@automatizalo_pe">
+  <meta property="twitter:title" content="Libro de Reclamaciones | Automatizalo.pe">
+  <meta property="twitter:description" content="Registra tus reclamaciones y opiniones.">
+  <meta property="twitter:image" content="assets/images/libro_reclamaciones.webp">
+  
+  <!-- Preconnects y Estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="nav" data-aos="fade-down">
+    <div class="logo">Automatizalo.pe</div>
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="../servicios/index.html">Servicios</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contacto/index.html">Contacto</a>
+    </div>
+    <button class="mobile-menu"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <!-- Sección Hero para Libro de Reclamaciones -->
+  <section class="hero" id="libro-reclamaciones-hero">
+    <div class="hero-content" data-aos="fade-right">
+      <div class="hero-image">
+        <img src="../assets/images/libro_reclamaciones.webp" alt="Libro de Reclamaciones">
+      </div>
+      <div class="hero-text">
+        <h1>Libro de Reclamaciones</h1>
+        <p class="lead">Estamos comprometidos en escuchar y resolver tus inquietudes. Completa el siguiente formulario para registrar tu reclamo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Reclamaciones -->
+  <section class="section" id="reclamaciones">
+    <h2 class="section-title" data-aos="fade-up">Registro de Reclamaciones</h2>
+    <form action="TU_FORMULARIO_BACKEND" method="POST" class="reclamaciones-form" data-aos="fade-up">
+      <div class="form-group">
+        <input type="text" class="form-input" name="nombre" placeholder="Nombre Completo" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-input" name="dni" placeholder="Documento de Identidad (DNI)" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-input" name="correo" placeholder="Correo Electrónico" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" class="form-input" name="telefono" placeholder="Teléfono" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-input" name="direccion" placeholder="Dirección" required>
+      </div>
+      <div class="form-group">
+        <textarea class="form-input" name="reclamacion" rows="5" placeholder="Describe tu reclamo de forma detallada" required></textarea>
+      </div>
+      <button type="submit" class="cta-button">Enviar Reclamación</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <div class="social-links">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-info">
+      <p>© 2025 Automatizalo.pe - Todos los derechos reservados</p>
+      <p>Av. Tecnológica 123, Lima - Perú</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>
