@@ -117,23 +117,14 @@ function closePopup() {
     }
 }
 
-// Mobile Menu
+// Función para el menú móvil
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
     const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
     
-    navLinks.classList.toggle('active');
-    menuBtn.classList.toggle('active');
-    
-    // Cerrar menú al hacer click fuera
-    if(navLinks.classList.contains('active')) {
-        document.addEventListener('click', function closeMenu(e) {
-            if(!e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-btn')) {
-                navLinks.classList.remove('active');
-                menuBtn.classList.remove('active');
-                document.removeEventListener('click', closeMenu);
-            }
-        });
+    if (menuBtn && mobileNav) {
+        menuBtn.classList.toggle('active');
+        mobileNav.classList.toggle('active');
     }
 }
 
@@ -206,19 +197,31 @@ function verificarPopup() {
     const popup = document.getElementById('superPromoPopup');
     
     if (popup && noMostrar !== 'true') {
-        popup.style.display = 'flex';
+        setTimeout(() => {
+            popup.style.display = 'flex';
+        }, 100);
     }
 }
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
+    // Event listeners para el menú móvil
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    if (menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+    }
+
+    // Inicializar otras funciones
     initSlider();
     verificarPopup();
-    showPopup();
     renderProducts();
     updateCartUI();
     
-    // Event listeners
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => toggleFAQ(question));
     });
