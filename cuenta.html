@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi cuenta - Recover Supplements. Gestiona tus pedidos y datos personales.">
+    <title>Mi Cuenta - Recover Supplements</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cuenta.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <!-- Shopify -->
+    <script src="https://cdn.shopify.com/shopifycloud/shop-js/v1.0.0/client.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_Recover_JPG__1_-removebg-preview.webp" alt="Recover Supplements">
+            </a>
+
+            <!-- Enlaces de navegación -->
+            <nav class="nav-links">
+                <a href="promociones.html">Promociones</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías & Objetivos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+
+            <!-- Contenedor derecho -->
+            <div class="nav-right">
+                <!-- Buscador -->
+                <div class="nav-search">
+                    <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Acciones de usuario -->
+                <div class="user-actions">
+                    <a href="cuenta.html" class="user-icon active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="carrito.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-nav">
+            <div class="nav-search">
+                <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="nav-links">
+                <a href="promociones.html">Promociones</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías & Objetivos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cuenta-container">
+        <div class="cuenta-grid">
+            <!-- Menú lateral -->
+            <aside class="cuenta-menu">
+                <div class="usuario-info">
+                    <div class="usuario-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 id="nombreUsuario">Usuario</h3>
+                    <p id="emailUsuario">usuario@email.com</p>
+                </div>
+
+                <nav class="menu-nav">
+                    <a href="#perfil" class="menu-item active" onclick="cambiarSeccion('perfil')">
+                        <i class="fas fa-user"></i> Mi Perfil
+                    </a>
+                    <a href="#pedidos" class="menu-item" onclick="cambiarSeccion('pedidos')">
+                        <i class="fas fa-shopping-bag"></i> Mis Pedidos
+                    </a>
+                    <a href="#direcciones" class="menu-item" onclick="cambiarSeccion('direcciones')">
+                        <i class="fas fa-map-marker-alt"></i> Direcciones
+                    </a>
+                    <a href="#favoritos" class="menu-item" onclick="cambiarSeccion('favoritos')">
+                        <i class="fas fa-heart"></i> Favoritos
+                    </a>
+                    <a href="#configuracion" class="menu-item" onclick="cambiarSeccion('configuracion')">
+                        <i class="fas fa-cog"></i> Configuración
+                    </a>
+                    <a href="#cerrar-sesion" class="menu-item" onclick="cerrarSesion()">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Contenido principal -->
+            <section class="cuenta-contenido">
+                <!-- Sección Perfil -->
+                <div class="seccion" id="perfil">
+                    <h2>Mi Perfil</h2>
+                    <form class="formulario-perfil" onsubmit="actualizarPerfil(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dni">DNI</label>
+                                <input type="text" id="dni" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+
+                <!-- Sección Pedidos -->
+                <div class="seccion" id="pedidos" style="display: none;">
+                    <h2>Mis Pedidos</h2>
+                    <div class="pedidos-lista" id="listaPedidos">
+                        <!-- Los pedidos se cargarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Sección Direcciones -->
+                <div class="seccion" id="direcciones" style="display: none;">
+                    <h2>Mis Direcciones</h2>
+                    <div class="direcciones-lista" id="listaDirecciones">
+                        <!-- Las direcciones se cargarán dinámicamente -->
+                    </div>
+                    <button class="btn btn-primary" onclick="agregarDireccion()">
+                        <i class="fas fa-plus"></i> Agregar Dirección
+                    </button>
+                </div>
+
+                <!-- Sección Favoritos -->
+                <div class="seccion" id="favoritos" style="display: none;">
+                    <h2>Mis Favoritos</h2>
+                    <div class="favoritos-grid" id="listaFavoritos">
+                        <!-- Los favoritos se cargarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Sección Configuración -->
+                <div class="seccion" id="configuracion" style="display: none;">
+                    <h2>Configuración</h2>
+                    <form class="formulario-configuracion" onsubmit="actualizarConfiguracion(event)">
+                        <div class="form-group">
+                            <label for="idioma">Idioma</label>
+                            <select id="idioma">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notificaciones">Notificaciones</label>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="notificaciones" value="email" checked>
+                                    Correo electrónico
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="notificaciones" value="sms" checked>
+                                    SMS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="privacidad">Privacidad</label>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="privacidad" value="publico" checked>
+                                    Perfil público
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="privacidad" value="pedidos" checked>
+                                    Mostrar historial de pedidos
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Configuración</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (igual que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <img src="assets/images/Logo_Recover.webp" alt="RecoverSup" class="footer-logo">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +51 999 888 777</p>
+                    <p><i class="fas fa-envelope"></i> info@recoversup.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Métodos de Pago</h4>
+                    <div class="payment-methods">
+                        <img src="assets/images/visa.png" alt="Visa">
+                        <img src="assets/images/mastercard.png" alt="Mastercard">
+                        <img src="assets/images/yape.png" alt="Yape">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 RecoverSup - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/cuenta.js"></script>
+</body>
+</html> 

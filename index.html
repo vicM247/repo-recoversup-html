@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RecoverSup - Tu tienda de suplementos deportivos en Perú. Proteínas, creatina, pre-entrenamientos y más.">
+    <title>Recover Supplements - Suplementos Deportivos</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <!-- Shopify -->
+    <script src="https://cdn.shopify.com/shopifycloud/shop-js/v1.0.0/client.js"></script>
+</head>
+<body>
+    <!-- Popup de Super Promoción -->
+    <div class="super-promo-popup" id="superPromoPopup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="cerrarSuperPromo()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-body">
+                <h2>¡SUPER PROMOCIÓN!</h2>
+                <div class="promo-content">
+                    <img src="assets/images/super-promo.webp" alt="Super Promoción">
+                    <div class="promo-text">
+                        <h3>¡Descuentos hasta 50% OFF!</h3>
+                        <p>En toda nuestra selección de suplementos deportivos</p>
+                        <ul class="promo-beneficios">
+                            <li><i class="fas fa-check"></i> Envío gratis en compras mayores a S/ 200</li>
+                            <li><i class="fas fa-check"></i> 2x1 en proteínas seleccionadas</li>
+                            <li><i class="fas fa-check"></i> 30% OFF en pre-entrenos</li>
+                        </ul>
+                        <a href="productos.html" class="btn btn-primary">¡APROVECHA AHORA!</a>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <label class="no-mostrar">
+                        <input type="checkbox" id="noMostrarPromo">
+                        No mostrar de nuevo
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_Recover.webp" alt="Recover Supplements">
+            </a>
+
+            <!-- Enlaces de navegación -->
+            <nav class="nav-links">
+                <a href="promociones.html">Promociones</a>
+                <div class="dropdown">
+                    <a href="productos.html" class="dropdown-trigger">Productos</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna de Productos -->
+                            <div class="menu-column">
+                                <h3>PRODUCTOS</h3>
+                                <ul>
+                                    <li><a href="productos.html?categoria=proteinas">PROTEÍNAS</a></li>
+                                    <li><a href="productos.html?categoria=creatinas">CREATINAS</a></li>
+                                    <li><a href="productos.html?categoria=aminoacidos">AMINOÁCIDOS</a></li>
+                                    <li><a href="productos.html?categoria=pre-entrenos">PRE-ENTRENOS</a></li>
+                                    <li><a href="productos.html?categoria=energizantes">ENERGIZANTES</a></li>
+                                    <li><a href="productos.html?categoria=dieteticos">DIETÉTICOS</a></li>
+                                    <li><a href="productos.html?categoria=vitaminas">VITAMINAS</a></li>
+                                    <li><a href="productos.html?categoria=organicos">ORGÁNICOS</a></li>
+                                    <li><a href="productos.html?categoria=snacks">SNACKS</a></li>
+                                    <li><a href="productos.html?categoria=accesorios">ACCESORIOS</a></li>
+                                    <li><a href="productos.html?categoria=shakers">SHAKERS</a></li>
+                                </ul>
+                            </div>
+                            <!-- Columna de Marcas -->
+                            <div class="menu-column">
+                                <h3>MARCAS</h3>
+                                <ul>
+                                    <li><a href="productos.html?marca=lab-nutrition">LAB NUTRITION</a></li>
+                                    <li><a href="productos.html?marca=lab-essential">LAB ESSENTIAL SERIES</a></li>
+                                    <li><a href="productos.html?marca=muscletech">MUSCLETECH</a></li>
+                                    <li><a href="productos.html?marca=met-rx">MET-RX</a></li>
+                                    <li><a href="productos.html?marca=cellucor">CELLUCOR</a></li>
+                                    <li><a href="productos.html?marca=solgar">SOLGAR</a></li>
+                                    <li><a href="productos.html?marca=orgain">ORGAIN</a></li>
+                                    <li><a href="productos.html?marca=ghost">GHOST</a></li>
+                                    <li><a href="productos.html?marca=purely-inspired">PURELY INSPIRED</a></li>
+                                    <li><a href="productos.html?marca=smartshake">SMARTSHAKE</a></li>
+                                    <li><a href="productos.html?marca=lab-europa">LAB NUTRITION EUROPA</a></li>
+                                </ul>
+                            </div>
+                            <!-- Columna de Imágenes Destacadas -->
+                            <div class="menu-featured">
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/hydrolyzed.webp" alt="Proteína Hidrolizada">
+                                    <div class="featured-overlay">
+                                        <h4>100% HIDROLIZADA</h4>
+                                    </div>
+                                </div>
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/c4-energy.webp" alt="C4 Energy">
+                                    <div class="featured-overlay">
+                                        <h4>C4 - ENERGY</h4>
+                                    </div>
+                                </div>
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/pre-workout.webp" alt="Pre Workout">
+                                    <div class="featured-overlay">
+                                        <h4>PRE-WORKOUT</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="categorias.html" class="dropdown-trigger">Categorías & Objetivos</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna de Categorías -->
+                            <div class="menu-column">
+                                <h3>CATEGORÍAS</h3>
+                                <ul>
+                                    <li><a href="categorias.html#performance">PERFORMANCE</a></li>
+                                    <li><a href="categorias.html#wellness">WELLNESS</a></li>
+                                    <li><a href="categorias.html#salud">SALUD</a></li>
+                                    <li><a href="categorias.html#organicos">ORGÁNICOS</a></li>
+                                    <li><a href="categorias.html#senior">SENIOR</a></li>
+                                    <li><a href="categorias.html#ninos">NIÑOS</a></li>
+                                </ul>
+                            </div>
+                            <!-- Columna de Objetivos -->
+                            <div class="menu-column">
+                                <h3>OBJETIVOS</h3>
+                                <ul>
+                                    <li><a href="objetivos.html#perdida-peso">PÉRDIDA DE PESO</a></li>
+                                    <li><a href="objetivos.html#definicion">DEFINICIÓN MUSCULAR</a></li>
+                                    <li><a href="objetivos.html#energia">AUMENTO DE ENERGÍA</a></li>
+                                    <li><a href="objetivos.html#rendimiento">MEJORA DE RENDIMIENTO</a></li>
+                                </ul>
+                            </div>
+                            <!-- Columna de Imágenes -->
+                            <div class="menu-featured">
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/categorias.webp" alt="Categorías">
+                                    <div class="featured-overlay">
+                                        <h4>CATEGORÍAS</h4>
+                                    </div>
+                                </div>
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/objetivos.webp" alt="Objetivos">
+                                    <div class="featured-overlay">
+                                        <h4>OBJETIVOS</h4>
+                                    </div>
+                                </div>
+                                <div class="featured-item">
+                                    <img src="assets/images/menu/wellness.webp" alt="Wellness">
+                                    <div class="featured-overlay">
+                                        <h4>WELLNESS</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+            </nav>
+
+            <!-- Contenedor derecho -->
+            <div class="nav-right">
+                <!-- Buscador -->
+                <div class="nav-search">
+                    <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Acciones de usuario -->
+                <div class="user-actions">
+                    <a href="cuenta.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="carrito.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+ 
+    <!-- Hero Section con Slider -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="assets/images/hero/hero_1.webp" alt="Promoción de Proteínas">
+                <div class="slide-content">
+                    <a href="productos.html" class="btn btn-primary"></a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/hero/hero_2.webp" alt="Pre-entrenos">
+                <div class="slide-content">
+                    <a href="productos.html" class="btn btn-primary"></a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/hero/hero_3.webp" alt="Aminoácidos">
+                <div class="slide-content">
+                    <a href="productos.html" class="btn btn-primary"></a>
+                </div>
+            </div>
+            <button class="slider-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="irASlide(0)"></span>
+                <span class="dot" onclick="irASlide(1)"></span>
+                <span class="dot" onclick="irASlide(2)"></span>
+            </div>
+        </div>
+
+        <!-- Banner de Promoción -->
+        <div class="promo-banner">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h2>¡OFERTA ESPECIAL!</h2>
+                    <p>Compra 2 productos y lleva el tercero 50% OFF</p>
+                    <a href="productos.html" class="btn btn-secondary">Ver Detalles</a>
+                </div>
+                <div class="banner-image">
+                    <img src="assets/images/promo-banner.webp" alt="Oferta Especial">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sección de Bienestar -->
+        <section class="bienestar-section">
+            <div class="container">
+                <h1 class="main-title">BIENESTAR, SALUD Y PERFORMANCE EN UN SOLO LUGAR</h1>
+                <p class="main-subtitle">Todos tenemos objetivos. Nosotros podemos ayudarte a alcanzar los tuyos.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Marcas -->
+        <section class="marcas-section">
+            <div class="container">
+                <div class="marcas-grid">
+                    <div class="marca-card">
+                        <div class="marca-content">
+                            <h2>MUSCLETECH®</h2>
+                            <a href="productos.html?marca=muscletech" class="btn-descubre">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/marcas/muscletech-bg.webp" alt="Muscletech Suplementos" class="marca-bg">
+                    </div>
+
+                    <div class="marca-card">
+                        <div class="marca-content">
+                            <h2>CELLUCOR®</h2>
+                            <a href="productos.html?marca=cellucor" class="btn-descubre">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/marcas/cellucor-bg.webp" alt="Cellucor Suplementos" class="marca-bg">
+                    </div>
+
+                    <div class="marca-card">
+                        <div class="marca-content">
+                            <h2>ATHLETICA®</h2>
+                            <a href="productos.html?marca=athletica" class="btn-descubre">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/marcas/athletica-bg.webp" alt="Athletica Suplementos" class="marca-bg">
+                    </div>
+
+                    <div class="marca-card">
+                        <div class="marca-content">
+                            <h2>GHOST®</h2>
+                            <a href="productos.html?marca=ghost" class="btn-descubre">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/marcas/ghost-bg.webp" alt="Ghost Suplementos" class="marca-bg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categorias-section">
+            <div class="container">
+                <h2 class="section-title">Categorías Destacadas</h2>
+                <div class="categorias-grid">
+                    <div class="categoria-card">
+                        <div class="categoria-content">
+                            <h2>PROTEÍNAS</h2>
+                            <p>Construye y repara tus músculos</p>
+                            <a href="productos.html?categoria=proteinas" class="btn-categoria">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/categorias/proteina.webp" alt="Proteínas" class="categoria-bg">
+                    </div>
+
+                    <div class="categoria-card">
+                        <div class="categoria-content">
+                            <h2>CREATINA</h2>
+                            <p>Aumenta tu fuerza y rendimiento</p>
+                            <a href="productos.html?categoria=creatina" class="btn-categoria">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/categorias/creatina.webp" alt="Creatina" class="categoria-bg">
+                    </div>
+
+                    <div class="categoria-card">
+                        <div class="categoria-content">
+                            <h2>PRE-ENTRENO</h2>
+                            <p>Maximiza tu energía y enfoque</p>
+                            <a href="productos.html?categoria=pre-entreno" class="btn-categoria">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/categorias/pre-entreno.webp" alt="Pre-entrenamiento" class="categoria-bg">
+                    </div>
+
+                    <div class="categoria-card">
+                        <div class="categoria-content">
+                            <h2>AMINOÁCIDOS</h2>
+                            <p>Optimiza tu recuperación</p>
+                            <a href="productos.html?categoria=aminoacidos" class="btn-categoria">DESCUBRE MÁS</a>
+                        </div>
+                        <img src="assets/images/categorias/aminoacidos.webp" alt="Aminoácidos" class="categoria-bg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Objetivos -->
+        <section class="objetivos-section">
+            <div class="container">
+                <h2 class="section-title">Decide tu objetivo</h2>
+                <div class="objetivos-grid">
+                    <div class="objetivo-card">
+                        <img src="assets/images/objetivos/performance.webp" alt="Performance - Rendimiento">
+                        <div class="objetivo-content">
+                            <h3>PERFORMANCE</h3>
+                            <p>Rendimiento</p>
+                            <a href="productos.html?objetivo=performance" class="btn-objetivo">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card">
+                        <img src="assets/images/objetivos/wellness.webp" alt="Wellness - Bienestar">
+                        <div class="objetivo-content">
+                            <h3>WELLNESS</h3>
+                            <p>Bienestar</p>
+                            <a href="productos.html?objetivo=wellness" class="btn-objetivo">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card">
+                        <img src="assets/images/objetivos/salud.webp" alt="Salud Integral">
+                        <div class="objetivo-content">
+                            <h3>SALUD</h3>
+                            <p>Salud integral</p>
+                            <a href="productos.html?objetivo=salud" class="btn-objetivo">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card">
+                        <img src="assets/images/objetivos/eco.webp" alt="Eco - Vida Natural">
+                        <div class="objetivo-content">
+                            <h3>ECO</h3>
+                            <p>Vida natural</p>
+                            <a href="productos.html?objetivo=eco" class="btn-objetivo">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card">
+                        <img src="assets/images/objetivos/senior.webp" alt="Senior - Adulto Mayor">
+                        <div class="objetivo-content">
+                            <h3>SENIOR</h3>
+                            <p>Adulto mayor</p>
+                            <a href="productos.html?objetivo=senior" class="btn-objetivo">Ver productos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios">
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <i class="fas fa-truck"></i>
+                    <div class="beneficio-content">
+                        <h3>Envío Gratis</h3>
+                        <p>En compras mayores a S/ 200</p>
+                    </div>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="beneficio-content">
+                        <h3>Pago Seguro</h3>
+                        <p>Múltiples métodos de pago</p>
+                    </div>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-medal"></i>
+                    <div class="beneficio-content">
+                        <h3>Calidad Garantizada</h3>
+                        <p>Productos originales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RecoverSup</h3>
+                    <p>Tu tienda de confianza para suplementos deportivos en Perú</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@recoversup.com</p>
+                    <p>Teléfono: +51 999 888 777</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Recoversup. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/51999888777" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        window.Shopify = window.Shopify || {};
+        window.Shopify.shop = 'TU-TIENDA.myshopify.com'; // Reemplazar con tu tienda
+        window.Shopify.storefrontAccessToken = 'TU-TOKEN'; // Reemplazar con tu token
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>

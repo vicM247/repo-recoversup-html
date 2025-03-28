@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /carrito.html
+Disallow: /cuenta.html
+
+Sitemap: https://www.recoversupplements.com/sitemap.xml 

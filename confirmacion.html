@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmación de pedido - Recover Supplements. Gracias por tu compra.">
+    <title>Confirmación - Recover Supplements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmacion.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <!-- Shopify -->
+    <script src="https://cdn.shopify.com/shopifycloud/shop-js/v1.0.0/client.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_Recover_JPG__1_-removebg-preview.webp" alt="Recover Supplements">
+            </a>
+
+            <!-- Enlaces de navegación -->
+            <nav class="nav-links">
+                <a href="promociones.html">Promociones</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías & Objetivos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+
+            <!-- Contenedor derecho -->
+            <div class="nav-right">
+                <!-- Buscador -->
+                <div class="nav-search">
+                    <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Acciones de usuario -->
+                <div class="user-actions">
+                    <a href="cuenta.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="carrito.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-nav">
+            <div class="nav-search">
+                <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="nav-links">
+                <a href="promociones.html">Promociones</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías & Objetivos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="confirmacion-container">
+        <div class="confirmacion-content">
+            <div class="confirmacion-icono">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h1>¡Compra Confirmada!</h1>
+            <p class="mensaje">Gracias por tu compra. Hemos recibido tu pedido correctamente.</p>
+            
+            <div class="numero-pedido">
+                <span>Número de pedido:</span>
+                <strong id="numeroPedido">#123456</strong>
+            </div>
+
+            <div class="resumen-pedido">
+                <h2>Resumen del Pedido</h2>
+                <div class="productos-resumen" id="productosResumen">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </div>
+                <div class="resumen-total">
+                    <div class="resumen-item">
+                        <span>Subtotal</span>
+                        <span id="subtotal">S/ 0.00</span>
+                    </div>
+                    <div class="resumen-item">
+                        <span>Descuento</span>
+                        <span id="descuento">-S/ 0.00</span>
+                    </div>
+                    <div class="resumen-item">
+                        <span>Envío</span>
+                        <span id="envio">S/ 0.00</span>
+                    </div>
+                    <div class="resumen-item total">
+                        <span>Total</span>
+                        <span id="total">S/ 0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="informacion-envio">
+                <h2>Información de Envío</h2>
+                <div class="envio-detalles" id="envioDetalles">
+                    <!-- Los detalles se cargarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="acciones">
+                <a href="productos.html" class="btn btn-primary">Seguir Comprando</a>
+                <button class="btn btn-outline" onclick="descargarFactura()">
+                    <i class="fas fa-download"></i> Descargar Factura
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (igual que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <img src="assets/images/Logo_Recover.webp" alt="RecoverSup" class="footer-logo">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +51 999 888 777</p>
+                    <p><i class="fas fa-envelope"></i> info@recoversup.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Métodos de Pago</h4>
+                    <div class="payment-methods">
+                        <img src="assets/images/visa.png" alt="Visa">
+                        <img src="assets/images/mastercard.png" alt="Mastercard">
+                        <img src="assets/images/yape.png" alt="Yape">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 RecoverSup - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+ 

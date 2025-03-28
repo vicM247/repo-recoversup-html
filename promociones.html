@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Promociones y ofertas especiales en suplementos deportivos - Recover Supplements">
+    <title>Promociones - Recover Supplements</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/promociones.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_Recover_JPG__1_-removebg-preview.webp" alt="Recover Supplements">
+            </a>
+
+            <!-- Enlaces de navegación -->
+            <nav class="nav-links">
+                <a href="promociones.html" class="active">Promociones</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías & Objetivos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+
+            <!-- Contenedor derecho -->
+            <div class="nav-right">
+                <!-- Buscador -->
+                <div class="nav-search">
+                    <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Acciones de usuario -->
+                <div class="user-actions">
+                    <a href="cuenta.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="carrito.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="promociones-page">
+        <!-- Banner principal -->
+        <section class="promo-hero">
+            <div class="container">
+                <h1>OFERTAS ESPECIALES</h1>
+                <p>Descubre nuestras mejores promociones en suplementos deportivos</p>
+            </div>
+        </section>
+
+        <!-- Grid de promociones -->
+        <section class="promociones-grid">
+            <div class="container">
+                <!-- Promoción destacada -->
+                <div class="promo-destacada">
+                    <img src="assets/images/promociones/promo-destacada.jpg" alt="Promoción Destacada">
+                    <div class="promo-content">
+                        <div class="promo-tag">OFERTA ESPECIAL</div>
+                        <h2>2x1 EN PROTEÍNAS</h2>
+                        <p>En todas las proteínas seleccionadas</p>
+                        <a href="productos.html?promo=2x1" class="btn-promo">Ver Productos</a>
+                    </div>
+                </div>
+
+                <!-- Grid de promociones secundarias -->
+                <div class="promos-secundarias">
+                    <div class="promo-card">
+                        <img src="assets/images/promociones/promo-1.jpg" alt="Pre-entrenos">
+                        <div class="promo-content">
+                            <div class="promo-tag">30% OFF</div>
+                            <h3>Pre-entrenos</h3>
+                            <p>Potencia tu entrenamiento</p>
+                            <a href="productos.html?promo=pre-entreno" class="btn-promo">Ver más</a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card">
+                        <img src="assets/images/promociones/promo-2.jpg" alt="Aminoácidos">
+                        <div class="promo-content">
+                            <div class="promo-tag">25% OFF</div>
+                            <h3>Aminoácidos</h3>
+                            <p>Mejora tu recuperación</p>
+                            <a href="productos.html?promo=aminoacidos" class="btn-promo">Ver más</a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card">
+                        <img src="assets/images/promociones/promo-3.jpg" alt="Vitaminas">
+                        <div class="promo-content">
+                            <div class="promo-tag">40% OFF</div>
+                            <h3>Vitaminas</h3>
+                            <p>Fortalece tu sistema</p>
+                            <a href="productos.html?promo=vitaminas" class="btn-promo">Ver más</a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card">
+                        <img src="assets/images/promociones/promo-4.jpg" alt="Packs">
+                        <div class="promo-content">
+                            <div class="promo-tag">PACK</div>
+                            <h3>Combo Ganador</h3>
+                            <p>Todo lo que necesitas</p>
+                            <a href="productos.html?promo=packs" class="btn-promo">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ... contenido del footer ... -->
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
